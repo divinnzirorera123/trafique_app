@@ -34,7 +34,10 @@ import {
   LayoutGrid,
   Save,
   AlertTriangle,
-  RefreshCcw
+  RefreshCcw,
+  Wind,
+  Train,
+  BarChart2
 } from 'lucide-react';
 
 const Settings = () => {
