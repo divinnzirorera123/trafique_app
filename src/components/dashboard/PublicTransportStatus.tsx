@@ -1,6 +1,7 @@
 
 import { RefreshCcw, Train, Bus } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
+import { cn } from '@/lib/utils';
 
 interface TransportRoute {
   id: string;
@@ -63,8 +64,9 @@ const PublicTransportStatus = () => {
               <span>{route.occupancy}%</span>
             </div>
             
-            <Progress value={route.occupancy} className="h-2" 
-              indicatorClassName={getOccupancyLevel(route.occupancy).color} 
+            <Progress 
+              value={route.occupancy} 
+              className={cn("h-2", getOccupancyLevel(route.occupancy).color)} 
             />
             
             <div className="mt-1 text-xs text-right text-muted-foreground">
